@@ -1,64 +1,84 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>404 Page Not Found</title>
-<style type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
+    <title>TechWise Direct | RMA </title>
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
+    <!-- jquery -->
+    <script src="<?= base_url('assets/jquery/jquery.min.js') ?>" type="text/javascript"></script>
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
+    <!-- bootstrap -->
+    <link href="<?= base_url('assets/bootstrap/css/bootstrap.css') ?>" rel="stylesheet" type="text/css" media="all" />
+    <script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js') ?>" type="text/javascript"></script>
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
+    <!-- simple line icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" media="all" />
 
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
+    <!-- font awesome -->
+    <link href="<?= base_url('assets/font-awesome/css/font-awesome.css') ?>" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- jquery ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- stylesheets -->
+    <link href="<?= base_url('v5/css/app2.css') ?>" rel="stylesheet" type="text/css" media="all" />
+    
+    <!-- animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
+	<div class="content bg-white text-center pulldown overflow-hidden">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="font-s128 font-w300 text-city animated flipInX">404</h1>
+                <h2 class="h3 font-w300 push-50 animated fadeInUp">We are sorry but the page you are looking for was not found..</h2>
+                <form class="form-horizontal push-50" method="post">
+                    <div class="form-group">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <div class="input-group input-group-lg">
+                                <input class="form-control" type="text" placeholder="Search application..">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 	</div>
+    <!-- end of content -->
+    <div class="content pulldown text-muted text-center">
+        Would you like to let us know about it?
+        <br />
+        <a class="link-effect" href="javascript:void(0)">Report it</a>
+        or
+        <a class="link-effect" href="<?php echo base_url(); ?>">Go Back to Dashboard</a>
+    </div>
 </body>
 </html>
