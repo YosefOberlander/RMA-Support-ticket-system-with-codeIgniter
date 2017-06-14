@@ -14,7 +14,7 @@
             <span class="title1">Verify Compliance</span>
             <span class="title2">Check return requirements before submitting your RMA request</span>
         </a>
-        <a href="" class="IconLink push-60-t">
+        <a href="posts" class="IconLink push-60-t">
             <img src="<?= base_url('assets/icons/images/rmaIcon_2.png') ?>" class="IconReg" />
             <img src="<?= base_url('assets/icons/images/rmaIcon_2_hover.png') ?>" class="IconHover" />
             <span class="title1">Request RMA</span>

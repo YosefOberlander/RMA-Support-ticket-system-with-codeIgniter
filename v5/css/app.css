@@ -575,7 +575,7 @@ ol.a-nonestyle li, ul.a-nonestyle li {
     font-size: 24px;
     padding-left: 10px;
     padding-bottom: 2px;
-    font-weight: normal;
+    font-weight: 600;
     width: 100%;
     text-align: left;
 }
@@ -670,4 +670,106 @@ p.center {
     padding-top: 25px;
     padding-bottom: 25px;
     min-height: 300px;
+}
+.bblue-title {
+    color: #65bbe6;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.rma-content-p {
+    margin-bottom: 25px !important;
+}
+.rma-form-form {
+    padding: 0 10%;
+}
+.rma-form-form div {
+    background-color: #dcdcdc;
+}
+.rma-form-header-section {
+    background-color: #012880 !important;
+    padding: 10px 0;
+    padding-left: 2%;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-form-header-section > label {
+    font-weight: 600;
+    font-size: 20px;
+}
+.rma-request-form-box {
+    background-color: #f0f0f0;
+    display: inline-block;
+    width: 960px;
+    padding: 20px 70px;
+}
+.rma-request-form-box label {
+    color: #000000;
+}
+.row .row_left {
+    max-width: 34%;
+    min-width: 34%;
+}
+.row .row_right {
+    width: 66%;
+}
+.row .row_left, .row .row_right {
+    float: left;
+}
+.rma-request-form-box input[type="text"] {
+    height: 36px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.input-w-50 {
+    width: 50% !important;
+}
+.required {
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+    color: red;
+}
+.rma-select-style {
+    width: 50%;
+    height: 36px;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding-left: 5px;
+}
+.rma-request-form-box select {
+    -webkit-appearance: none;
+}
+#sku_loop, #initial_sku {
+    width: 100%;
+    float: left;
+}
+.rma_first_sku {
+    width: 960px;
+    line-height: 45px;
+    float: left;
+    margin: 10px -55px;
+    background-color: #012880;
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-textarea-style {
+    height: 100px;
+    width: 50%;
+    border: 1px solid #CCCCCC;
+}
+.no-resize {
+    resize: none;
+}
+.Techblue {
+    background-color: #012880;
+    color: #fff;
+    border: 0;
 }

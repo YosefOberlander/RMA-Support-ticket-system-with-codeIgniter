@@ -9,4 +9,10 @@ class Posts extends CI_Controller {
         $this->load->view('posts/index', $data);
         $this->load->view('templates/footer');
     }
+
+    public function create() {
+
+        $this->form_validation->set_rules('customer_reference_number', 'Reference Number', 'required');
+        $this->form_validation->set_rules('');
+    }
 }
