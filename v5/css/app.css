@@ -773,3 +773,39 @@ p.center {
     color: #fff;
     border: 0;
 }
+#rma-success-container >  header > h1 {
+    /*display: none; */
+}
+.rma_success_table {
+    background-color: #f0f0f0;
+    border-collapse: inherit;
+    text-align: left;
+    padding: 2px;
+}
+.rma_success_table thead {
+    background-color: #012880;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma_success_table thead tr th {
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid;
+    border-collapse: separate;
+}
+.rma_success_table tbody {
+    font-size: 15px;
+}
+.rma_success_table thead tr th, .rma_success_table tbody tr td {
+    padding: 6px;
+    text-align: center;
+}
+.push-20-t {
+    padding-top: 20px !important;
+}
+.very-rma-under-table-p {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
