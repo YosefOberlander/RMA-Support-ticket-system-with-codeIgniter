@@ -36,8 +36,64 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="push-20-t very-rma-under-table-p">
+            <p class="push-20-t push-20-b very-rma-under-table-p">
                 Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            </p>
+            <p class="h2 push-5">Wallmart Return Policy</p>
+            <p class="very-rma-under-table-p-p blue-title">Return Guidelines</p>
+            <p class="very-rma-under-table-p-p">14 Days Money back or replacement (buyer's choice).  Buyer pays return shipping 15% (restocking fee may apply) unless the item is defective</p>
+            <p class="very-rma-under-table-p-p">All items we sell have a full manufacturer warranty unless noted in the description of the item sold. If you have a return, we thank you for following these simple guidelines below.</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>All return must be in the original box with all contents enclosed.</li>
+                    <li>It must be returned like new as when it was first received.</li>
+                    <li>All UPC codes must still be on the boxes when returned.</li>
+                    <li>All serial numbers on the box, must match the serial number attached to the product.</li>
+                    <li>Please do not write on the outside of the manufacturers box, at any time.</li>
+                    <li>All returns must have a Return Merchandise Authorization (RMA) number that is keyed in our warehouse system to a return. Any return that does not have an RMA number will be refused by our warehouse.</li>
+                    <li>A copy of your Return Merchandise Authorization (RMA) must be included with all your returns.</li>
+                    <li>A copy of your Wallmart purchase history must be included in all return with the full reason of the return.</li>
+                    <li>All refunds will be issued through the debit/credit account used when purchased.</li>
+                    <li>Please note all shavers/trimmers and beauty items are exchange only if the item is deemed defective.</li>
+                </ul>
+            </p>
+            <p class="very-rma-under-table-p-p blue-title">Getting Your Money Back</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>Once a return is accepted in our warehouse and inspected a refund will be issued, please allow 48-72 hours for this process. In most cases all refunds are done within 36 hours.</li>
+                </ul>
+            </p>
+            <p class="very-rma-under-table-p-p blue-title">Non-Defective items</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>If you receive a non-defective return, the item must be an unopened, unused product. Anything that is returned and is not as stated on being unopened
+                    or unused will be charged a 30% restocking fee that will be deducted from the refund issued. All non-defective returns are shipped at the buyer's expanse
+                    and with a tracking number to prove that it was returned. These returns must be done within 14 days of receipt of item. We use the tracking information to
+                    provide us with the day received.</li>
+                </ul>
+            </p>
+            <p class="very-rma-under-table-p-p blue-title">Defective Items</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>If you have a defective return, the returned item must be complete and all contents included. All returned defective items will be subject to inspection
+                    upon receipt on our warehouse. Any item that we find that is not defective will be subject to a 25-35% restocking fee and will be deducted before a refund is
+                    issued.  If it is a battery operated item, please make sure fresh batteries where installed before deeming a product defective.  These returns must be done within
+                    30 days of receipt of item.  Any item after the 30 days period will have to be returned back to the manufacturer for either a replacement or repair </li>
+                </ul>
+            </p>
+            <p class="very-rma-under-table-p-p blue-title">Refused Packages</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>If a package is refused for any reason, or having us ship to a wrong address, we will deduct what was charged to us to handel all shipping expenses before a refund is
+                    issued. This does not apply if it was any fault of our own.  Please understand that we cannot change an address once we receive the shipping instructions per Wallmart. The
+                    order will be cancelled, a refund will be issued and my be subject to Wallmart fees when refunded.</li>
+                </ul>
+            </p>
+            <p class="very-rma-under-table-p-p blue-title">Thank You</p>
+            <p class="very-rma-under-table-p-p">
+                <ul class="rma-return-policy-ul">
+                    <li>We always do our very best to make this as painless as possible and we strive as always to work with you on any problems within reason.</li>
+                </ul>
             </p>
         </article>
     </div>
