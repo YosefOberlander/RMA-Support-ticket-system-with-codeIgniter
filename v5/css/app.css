@@ -827,3 +827,22 @@ p.very-rma-under-table-p-p {
     font-size: 16px !important;
     font-weight: bold !important;
 }
+.rma-return-policy-table-container {
+    padding: 5px 0 15px 0;
+}
+.rma-return-policy-table-container table i {
+    padding-right: 10px;
+    color: #000;
+}
+.rma-return-policy-table-container table a {
+    color: #0060bf;
+    text-decoration: underline;
+}
+.rma-return-policy-table-container table a:visited {
+    color: #0060bf;
+    text-decoration: underline;
+}
+.rma-return-policy-table-container table a:hover {
+    color: #3399ff;
+    text-decoration: underline;
+}
