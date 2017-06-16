@@ -40,7 +40,8 @@
                 Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             </p>
             <!-- /. -->
-            <div class="rma-return-policy-table-container">
+            <p class="h2 push-5">Wallmart Return Policy</p>
+                        <div class="rma-return-policy-table-container">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                         <tr>
@@ -83,8 +84,24 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </td>
                                             <td width="100%" height="14">
-                                                
+                                                <a href="#">Defective Items</a>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                          <td height="14" valign="top">
+                                            <i class="fa fa-caret-down"></i>
+                                          </td>
+                                          <td height="14">
+                                            <a href="#">Refused Packages</a>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td valign="top" height="14">
+                                            <i class="fa fa-caret-down"></i>
+                                          </td>
+                                          <td height="14">
+                                            <a href="#">Thank You</a>
+                                          </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -93,7 +110,6 @@
                     </tbody>
                 </table>
             </div>
-            <p class="h2 push-5">Wallmart Return Policy</p>
             <p class="very-rma-under-table-p-p blue-title">Return Guidelines</p>
             <p class="very-rma-under-table-p-p">14 Days Money back or replacement (buyer's choice).  Buyer pays return shipping 15% (restocking fee may apply) unless the item is defective</p>
             <p class="very-rma-under-table-p-p">All items we sell have a full manufacturer warranty unless noted in the description of the item sold. If you have a return, we thank you for following these simple guidelines below.</p>
@@ -144,11 +160,54 @@
                 </ul>
             </p>
             <p class="very-rma-under-table-p-p blue-title">Thank You</p>
-            <p class="very-rma-under-table-p-p">
                 <ul class="rma-return-policy-ul">
                     <li>We always do our very best to make this as painless as possible and we strive as always to work with you on any problems within reason.</li>
                 </ul>
-            </p>
+            <p class="very-rma-under-table-p-p push-20-b"></p>
+            <!-- /. wallmart return policy -->
+            <p class="h2 push-5">TechWise Direct Return Policy</p>
+            <div class="rma-return-policy-table-container">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td width="40" valign="top">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="14" height="14" valign="top">
+                                            <i class="fa fa-caret-down"></i>
+                                        </td>
+                                        <td width="100%" height="14">
+                                            <a href="#">Shipping Requirements</a>
+                                        </td> 
+                                    </tr>
+                                    <tr>
+                                        <td height="14" valign="top">
+                                            <i class="fa fa-caret-down"></i>
+                                        </td>
+                                        <td height="14">
+                                            <a href="#">Customer Service</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="14" valign="top">
+                                            <i class="fa fa-caret-down"></i>
+                                        </td>
+                                        <td height="14">
+                                            <a href="#">Damages</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td width="10"></td>
+                        <td width="60%" valign="top">
+
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
         </article>
     </div>
 </div>
