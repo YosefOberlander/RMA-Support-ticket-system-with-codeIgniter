@@ -29,6 +29,7 @@
                         </div>
                         <div class="rma-request-form-box">
                             <div class="row">
+                                <input class="input-w-50" type="hidden" name="rma_request_count" id="rma_request_count" value="1" />
                                 <div class="row_left">
                                     <label for="customer_reference_number">Your Reference Number:</label>
                                 </div>
@@ -74,6 +75,17 @@
                                 <div class="row_right">
                                     <input class="input-w-50" type="text" name="customer_company" id="customer_company" />
                                 </div> <!-- /. customer company -->
+                                <div class="row_left">
+                                    <label for="customer_marketplace">Marketplace:</label>
+                                    <span class="required">*</span>
+                                </div>
+                                <div class="row_right">
+                                    <select class="rma-select-style input-w-50" name="customer_marketplace" id="customer_marketplace">
+                                        <option value="">Select Marketplace...</option>
+                                        <option value="Wallmart">Wallmart</option>
+                                        <option value="TechWise Direct">TechWise Direct</option>
+                                    </select>
+                                </div> <!-- /. customer marketplace -->
                                 <div class="row_left">
                                     <label for="customer_order_number">Order Number:</label>
                                     <span class="required">*</span>
@@ -176,29 +188,29 @@
                                     <div class="row_right">
                                         <select class="rma-select-style input-w-50" name="customer_return_type" id="customer_return_type">
                                             <option value="">Select Return Type...</option>
-                                            <option value="stock_balance_factory_sealed">Stock Balance - Factory Sealed</option>
-                                            <option value="defective_product_with_original_packaging">Defective Product With Original Packaging</option>
-                                            <option value="damaged_product">Damaged Product</option>
-                                            <option value="techwise_sales_error_unopened">TechWise Sales Error - Unopened</option>
-                                            <option value="techwise_sales_error_opened">TechWise Sales Error</option>
-                                            <option value="open_box_return">Open Box Return</option>
-                                            <option value="whse_shipped_wrong_item_unopened">Whse Shipped Wrong Item - Unopened</option>
-                                            <option value="whse_shipped_wrong_item_opened">Whse Shipped Wrong Item - Opened</option>
-                                            <option value="product_incomplete">Product Incomplete</option>
-                                            <option value="no_longer_needed_unopened">No Longer Needed or Wanted - Unopened</option>
-                                            <option value="no_longer_needed_opened">No Longer Needed or Wanted - Opened</option>
+                                            <option value="Stock Balance Factory Sealed">Stock Balance - Factory Sealed</option>
+                                            <option value="Defective Product With Original Packaging">Defective Product With Original Packaging</option>
+                                            <option value="Damaged Product">Damaged Product</option>
+                                            <option value="Techwise Sales Error Unopened">TechWise Sales Error - Unopened</option>
+                                            <option value="Techwise Sales Error Opened">TechWise Sales Error</option>
+                                            <option value="Open Box Return">Open Box Return</option>
+                                            <option value="Whse Shipped Wrong Item Unopened">Whse Shipped Wrong Item - Unopened</option>
+                                            <option value="Whse Shipped Wrong Item Opened">Whse Shipped Wrong Item - Opened</option>
+                                            <option value="Product Incomplete">Product Incomplete</option>
+                                            <option value="No Longer Needed Unopened">No Longer Needed or Wanted - Unopened</option>
+                                            <option value="No Longer Needed Opened">No Longer Needed or Wanted - Opened</option>
                                         </select>
                                         <select class="rma-select-style input-w-50" name="customer_hardware_problem" id="customer_hardware_problem">
                                             <option value="">Select Hardware Problem...</option>
-                                            <option value="dead_on_arrival">Dead On Arrival</option>
-                                            <option value="grinding_noise">Grinding Noise</option>
-                                            <option value="loses_print_job">Loses Print Job</option>
-                                            <option value="no_line_feed_paper_jam">No Line Feed/Paper Jam</option>
-                                            <option value="poor_print_quality">Poor Print Quality</option>
-                                            <option value="satisfaction_guaranteed_return">Satisfaction-Guaranteed Return</option>
-                                            <option value="stock_balance">Stock Balance</option>
-                                            <option value="whining_noise">Whining Noise</option>
-                                            <option value="wont_write">Won't Write</option>
+                                            <option value="Dead On Arrival">Dead On Arrival</option>
+                                            <option value="Grinding Noise">Grinding Noise</option>
+                                            <option value="Loses Print Job">Loses Print Job</option>
+                                            <option value="No Line Feed Paper Jam">No Line Feed/Paper Jam</option>
+                                            <option value="Poor Print Quality">Poor Print Quality</option>
+                                            <option value="Satisfaction Guaranteed Return">Satisfaction-Guaranteed Return</option>
+                                            <option value="Stock Balance">Stock Balance</option>
+                                            <option value="Whining Noise">Whining Noise</option>
+                                            <option value="Wont Write">Won't Write</option>
                                         </select>
                                     </div> <!-- /. customer return type & hardware problem-->
                                     <div class="row_left">
@@ -208,6 +220,13 @@
                                     <div class="row_right">
                                         <input class="input-w-50" type="text" name="customer_sku" id="customer_sku" />
                                     </div> <!-- /. customer sku -->
+                                    <div class="row_left">
+                                        <label for="customer_product_name">Product Full Name:</label>
+                                        <span class="required">*</span>
+                                    </div>
+                                    <div class="row_right">
+                                        <input class="input-w-50" type="text" name="customer_product_name" id="customer_product_name">
+                                    </div><!-- customer product name -->
                                     <div class="row_left">
                                         <label for="customer_quantity">Quantity:</label>
                                         <span class="required">*</span>
@@ -245,6 +264,7 @@
                                 </div> <!-- customer hardware serial numbers -->
                                 <div class="row_left">
                                     <label for="customer_comments">Comments:</label>
+                                    <span class="required">*</span>
                                 </div>
                                 <div class="row_right">
                                     <textarea class="rma-textarea-style no-resize" name="customer_comments" id="customer_comments"></textarea>

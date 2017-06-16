@@ -846,3 +846,6 @@ p.very-rma-under-table-p-p {
     color: #3399ff;
     text-decoration: underline;
 }
+.push-10-b {
+    padding-bottom: 10px !important;
+}
