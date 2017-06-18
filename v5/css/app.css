@@ -855,3 +855,90 @@ p.very-rma-under-table-p-p {
     background-color: #e90f2b;
     border-color: #e90f2b;
 }
+
+/** RMA AND CLAIM SEARCH PAGE STYLE **/
+.rma-search-form {
+    padding: 0 80px;
+}
+.rma-search-table {
+    background-color: #f0f0f0;
+    border-collapse: inherit;
+    text-align: left;
+}
+.rma-search-table thead {
+    background-color: #120880;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-search-table th {
+    padding: 10px 10px !important;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-search-table thead tr th, .rma-search-table tbody tr td {
+    padding: 0 5px;
+}
+.rma-search-table.claimtable td {
+    display: inline;
+    width: 100%;
+}
+.rma-search-table .form-row {
+    padding: 3px;
+    margin: 0 0 6px;
+}
+.rma-search-table .form-row:before, .form-row:after {
+    clear: both;
+}
+.rma-search-table .form-row label {
+    line-height: 2;
+}
+.rma-search-table label {
+    color: #000;
+}
+.rma-search-table.claimtable label {
+    display: inline-block;
+    margin-left: 7%;
+}
+.rma-search-table .right-align {
+    margin-right: 7.3%;
+}
+.rma-search-table.claimtable .input-text {
+    height: 36px;
+    background-color: #fff;
+}
+.input-w-25 {
+    width: 35%;
+}
+.rma-search-table .form-row .input-text {
+    border: 1px solid #999;
+    font-size: 15px;
+    color: #000;
+    padding: 8px;
+}
+.rma-status-one th.status-one, .rma-status-one th.status-two {
+    background-color: #120880;
+    padding: 10px 0;
+    border: 1px solid;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23 !important;
+}
+.rma-status-details th {
+    text-align: center;
+    border: 1px solid #888888 !important;
+}
+.rma-status-details {
+    border-collapse: inherit;
+    border-spacing: 2px !important;
+}
+.rma-status-details td {
+    text-align: center;
+    color: #1A1BCF;
+    font-weight: bold;
+    border: 1px solid #888888 !important;
+}
+.rma-status-three th.status-one{
+    background-color: #120880;
+    padding:  10px 0;
+    border: 1px solid;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23 !important;
+}

@@ -10,4 +10,13 @@
             $this->load->view('posts/status', $data);
             $this->load->view('templates/footer');
         }
+
+        public function found_rma_record() {
+
+            $data['title'] = "Current RMA/Claim Summary";
+
+            $this->load->view('templates/header');
+            $this->load->view('posts/current_rma_summary', $data);
+            $this->load->view('templates/footer');
+        }
     }
