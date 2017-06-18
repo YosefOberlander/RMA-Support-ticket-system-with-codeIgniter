@@ -19,4 +19,14 @@
             $this->load->view('posts/current_rma_summary', $data);
             $this->load->view('templates/footer');
         }
+
+        public function rma_summary_result() {
+
+            $data['title'] = "Current RMA/Claim Summary";
+
+            $this->load->view('templates/header');
+            $this->load->view('posts/rma_summary_result', $data);
+            $this->load->view('templates/footer');
+
+        }
     }
