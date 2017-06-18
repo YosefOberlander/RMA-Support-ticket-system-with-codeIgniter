@@ -37,6 +37,12 @@
                                     <input class="input-w-50" type="text" readonly name="customer_reference_number" id="customer_reference_number" value="<?php echo mt_rand(60000000,69999999); ?>"/>
                                 </div> <!-- /. reference number -->
                                 <div class="row_left">
+                                    <label for="rma_request_date">RMA Request Date</label>
+                                </div>
+                                <div class="row_right">
+                                    <input class="input-w-50" type="text" readonly name="rma_request_date" id="rma_request_date" value="<?php date_default_timezone_set('America/New_York');  echo date('m/d/y'); ?>"/>
+                                </div> <!-- /. rma_request_date -->
+                                <div class="row_left">
                                     <label for="customer_name">Name:</label>
                                     <span class="required">*</span>
                                 </div>
@@ -82,8 +88,8 @@
                                 <div class="row_right">
                                     <select class="rma-select-style input-w-50" name="customer_marketplace" id="customer_marketplace">
                                         <option value="">Select Marketplace...</option>
-                                        <option value="Wallmart">Wallmart</option>
-                                        <option value="TechWise Direct">TechWise Direct</option>
+                                        <option value="Wallmart.com">Wallmart.com</option>
+                                        <option value="TechWise Direct.com">TechWise Direct.com</option>
                                     </select>
                                 </div> <!-- /. customer marketplace -->
                                 <div class="row_left">

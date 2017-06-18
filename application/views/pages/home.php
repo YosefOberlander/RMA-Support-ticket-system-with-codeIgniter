@@ -20,7 +20,7 @@
             <span class="title1">Request RMA</span>
             <span class="title2">To return an item, request an RMA by completing out online form</span>
         </a>
-        <a href="check-status" class="IconLink push-60-t">
+        <a href="check_status" class="IconLink push-60-t">
             <img src="<?= base_url('assets/icons/images/rmaIcon_3.png') ?>" class="IconReg" />
             <img src="<?= base_url('assets/icons/images/rmaIcon_3_hover.png') ?>" class="IconHover" />
             <span class="title1">Check Status</span>

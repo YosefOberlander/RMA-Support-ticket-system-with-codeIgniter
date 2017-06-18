@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
 <div class="fakeHeader">
     <!-- insert content later -->
 </div>
@@ -23,20 +22,23 @@
                         <th>Request Product Name</th>
                         <th>Status</th>
                         <th>Reason</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td>62463002</td>
-                        <td>6/15/2017</td>
-                        <td>Asus VE278H 27" LED Monitor</td>
-                        <td>Pending</td>
-                        <td>Damaged Product</td>
+                        <td><?php echo $_POST['rma_request_count']; ?></td>
+                        <td><?php echo $_POST['customer_reference_number']; ?></td>
+                        <td><?php echo $_POST['rma_request_date']; ?></td>
+                        <td><?php echo $_POST['customer_product_name']; ?></td>
+                        <td><?php echo "Pending"; ?></td>
+                        <td><?php echo $_POST['customer_return_type']; ?></td>
+                        <td><?php echo "No Action Available"; ?></td>
                     </tr>
                 </tbody>
             </table>
-            <p class="push-20-t very-rma-under-table-p">
+            <p class="push-20-t very-rma-under-table-p">Your RMA Request is Penning for approval no actions are available at this time.</p>
+            <p class="very-rma-under-table-p">
                 Please be advised that we can only approve your RMA with a valid proof of purchase/receipt.  Unfortunately we cannot determine your warranty without it.  <strong>Asking you to open an RMA claim is not an approval for an RMA</strong>
             </p>
             <p class="push-20-b very-rma-under-table-p">
@@ -56,7 +58,7 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </td>
                                             <td width="100%" height="14">
-                                                <a href="#">Return Guidelines</a>
+                                                <a href="#return_guidelines">Return Guidelines</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -64,7 +66,7 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </td>
                                             <td height="14">
-                                                <a href="#">Getting Your Money Back</a>
+                                                <a href="#getting_your_money_back">Getting Your Money Back</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -72,7 +74,7 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </td>
                                             <td height="14">
-                                                <a href="#">No-Defective Items</a>
+                                                <a href="#non_defective_items">Non-Defective Items</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -87,7 +89,7 @@
                                                 <i class="fa fa-caret-down"></i>
                                             </td>
                                             <td width="100%" height="14">
-                                                <a href="#">Defective Items</a>
+                                                <a href="#defective_items">Defective Items</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -95,7 +97,7 @@
                                             <i class="fa fa-caret-down"></i>
                                           </td>
                                           <td height="14">
-                                            <a href="#">Refused Packages</a>
+                                            <a href="#refused_packages">Refused Packages</a>
                                           </td>
                                         </tr>
                                         <tr>
@@ -103,7 +105,7 @@
                                             <i class="fa fa-caret-down"></i>
                                           </td>
                                           <td height="14">
-                                            <a href="#">Thank You</a>
+                                            <a href="#thank_you">Thank You</a>
                                           </td>
                                         </tr>
                                     </tbody>
@@ -113,6 +115,7 @@
                     </tbody>
                 </table>
             </div>
+            <a name="return_guidelines"></a>
             <p class="very-rma-under-table-p-p blue-title">Return Guidelines</p>
             <p class="very-rma-under-table-p-p">14 Days Money back or replacement (buyer's choice).  Buyer pays return shipping 15% (restocking fee may apply) unless the item is defective</p>
             <p class="very-rma-under-table-p-p">All items we sell have a full manufacturer warranty unless noted in the description of the item sold. If you have a return, we thank you for following these simple guidelines below.</p>
@@ -130,12 +133,14 @@
                     <li>Please note all shavers/trimmers and beauty items are exchange only if the item is deemed defective.</li>
                 </ul>
             </p>
+            <a name="getting_your_money_back"></a>
             <p class="very-rma-under-table-p-p blue-title">Getting Your Money Back</p>
             <p class="very-rma-under-table-p-p">
                 <ul class="rma-return-policy-ul">
                     <li>Once a return is accepted in our warehouse and inspected a refund will be issued, please allow 48-72 hours for this process. In most cases all refunds are done within 36 hours.</li>
                 </ul>
             </p>
+            <a name="non_defective_items"></a>
             <p class="very-rma-under-table-p-p blue-title">Non-Defective items</p>
             <p class="very-rma-under-table-p-p">
                 <ul class="rma-return-policy-ul">
@@ -145,6 +150,7 @@
                     provide us with the day received.</li>
                 </ul>
             </p>
+            <a name="defective_items"></a>
             <p class="very-rma-under-table-p-p blue-title">Defective Items</p>
             <p class="very-rma-under-table-p-p">
                 <ul class="rma-return-policy-ul">
@@ -154,6 +160,7 @@
                     30 days of receipt of item.  Any item after the 30 days period will have to be returned back to the manufacturer for either a replacement or repair </li>
                 </ul>
             </p>
+            <a name="refused_packages"></a>
             <p class="very-rma-under-table-p-p blue-title">Refused Packages</p>
             <p class="very-rma-under-table-p-p">
                 <ul class="rma-return-policy-ul">
@@ -162,6 +169,7 @@
                     order will be cancelled, a refund will be issued and my be subject to Wallmart fees when refunded.</li>
                 </ul>
             </p>
+            <a name="thank_you"></a>
             <p class="very-rma-under-table-p-p blue-title">Thank You</p>
                 <ul class="rma-return-policy-ul">
                     <li>We always do our very best to make this as painless as possible and we strive as always to work with you on any problems within reason.</li>
@@ -181,7 +189,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td width="100%" height="14">
-                                            <a href="#">Return Guidelines</a>
+                                            <a href="#return_guidelines_2">Return Guidelines</a>
                                         </td> 
                                     </tr>
                                     <tr>
@@ -189,7 +197,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td height="14">
-                                            <a href="#">Shipping Required</a>
+                                            <a href="#shipping_requirements">Shipping Requirements</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -197,7 +205,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td height="14">
-                                            <a href="#">Customer Service</a>
+                                            <a href="#customer_service">Customer Service</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -212,7 +220,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td height="14" width="100%">
-                                            <a href="#">Damages</a>
+                                            <a href="#damages">Damages</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -220,7 +228,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td height="14">
-                                            <a href="#">Special Returns</a>
+                                            <a href="#special_returns">Special Returns</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -228,7 +236,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </td>
                                         <td height="14">
-                                            <a href="#">No Returns</a>
+                                            <a href="#no_returns">No Returns</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -238,10 +246,12 @@
                 </tbody>
               </table>
             </div>
+            <a name="return_guidelines_2"></a>
             <p class="very-rma-under-table-p-p blue-title">Return Guidelines</p>
             <p class="very-rma-under-table-p-p">You must have a Return Merchandise Authorization (RMA) number before returning any merchandise to TechWise Direct.</p>
             <p class="very-rma-under-table-p-p">For a hard copy of this form, please email <a href="mailto:customer.service@techwisedirect.com">customer.service@techwisedirect.com</a> </p>
             <p class="very-rma-under-table-p-p push-10-b">You can request an RMA online by submitting the request via email. Once you have provided TechWise Direct with the appropriate information, we will contact you with an assigned RMA number.</p>
+            <a name="shipping_requirements"></a>
             <p class="very-rma-under-table-p-p blue-title">Shipping Requirements</p>
             <p class="very-rma-under-table-p-p">Please take care in shipping a product back to TechWise Direct. All returned cartons that do not meet the following conditions, will be returned to you with a $50 processing fee and return freight charged to your account:</p>
             <ul class="rma-return-policy-ul">
@@ -260,6 +270,7 @@
                 <li>Merchandise must be secured with proper packaging to prevent any damage in transit.</li>
                 <li><strong>If all criteria are met, TechWise Direct will issue a credit to your account. All refunds take 48-72 hours to be processed through our system.</strong></li>
             </ul>
+            <a name="damages"></a>
             <p class="very-rma-under-table-p-p blue-title">Damages</p>
             <p class="very-rma-under-table-p-p">TechWise Direct DOA Policy does not cover any physical damage that your product may incur in transit. If you receive a product that is damaged in transit, follow these instructions:</p>
             <ul class="rma-return-policy-ul">
@@ -272,6 +283,7 @@
                 <li>Damage claims are the responsibility of the consignee. The shipping cartons, packing and content should be retained in the same condition as received.</li>
                 <li>Some manufacturers require that all defective and DOA products be returned directly to them, or they may limit the time frame in which you can return products.</li>
             </ul>
+            <a name="special_returns"></a>
             <p class="very-rma-under-table-p-p blue-title push-10-b">Special Returns</p>
             <p class="very-rma-under-table-p-p blue-title">Xbox</p>
             <ul class="rma-return-policy-ul">
@@ -289,6 +301,7 @@
                 <li>Nintendo Consoles -All serial numbers on all consoles are tracked by us. Our defective window is 20 days from original invoice date. All console returns must include console, controller, software, AV cable and power cord, original box and packing. Any missing items will charged a 50% restocking fee to replace with the manufacturer.</li>
                 <li>Nintendo Software and Accessories - We will accept defective returns up to 20 days from date of invoice. All software and accessories must be returned for same product replacement only. No refunds will be issued, replacement only.</li>
             </ul>
+            <a name="no_returns"></a>
             <p class="very-rma-under-table-p-p blue-title">No Returns</p>
             <ul class="rma-return-policy-ul">
                 <li><strong>JVC: No returns on DVD/BluRay/VCR or camcorder.</strong></li>

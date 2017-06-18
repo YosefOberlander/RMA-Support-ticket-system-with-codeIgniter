@@ -43,7 +43,6 @@ class Posts extends CI_Controller {
     public function success() {
         $data['title'] = "Verify RMA/Claim request information Form";
 
-        $this->post_model->create_post();
         $this->load->view('templates/header');
         $this->load->view('posts/success', $data);
         $this->load->view('templates/footer');

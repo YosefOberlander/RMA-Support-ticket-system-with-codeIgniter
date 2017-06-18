@@ -797,7 +797,8 @@ p.center {
     font-size: 15px;
 }
 .rma_success_table thead tr th, .rma_success_table tbody tr td {
-    padding: 6px;
+    /* padding: 6px;*/
+    padding: 04px;
     text-align: center;
 }
 .push-20-t {
@@ -848,4 +849,9 @@ p.very-rma-under-table-p-p {
 }
 .push-10-b {
     padding-bottom: 10px !important;
+}
+.rma-request-form-box .btn-primary:focus, .btn-primary.focus, .btn-primary:hover {
+    color: #fff;
+    background-color: #e90f2b;
+    border-color: #e90f2b;
 }

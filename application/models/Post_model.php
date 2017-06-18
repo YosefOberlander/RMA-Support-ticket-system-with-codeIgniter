@@ -9,6 +9,7 @@
             $data = array (
                 'rma_request_count' => $this->input->post('rma_request_count'),
                 'reference_number' => $this->input->post('customer_reference_number'),
+                'rma_request_date' => $this->input->post('rma_request_date'),
                 'name' => $this->input->post('customer_name'),
                 'email' => $this->input->post('customer_email'),
                 'phone' => $this->input->post('customer_phone'),
