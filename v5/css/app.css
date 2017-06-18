@@ -942,3 +942,8 @@ p.very-rma-under-table-p-p {
     color: #fff;
     border-bottom: 5px solid #EC1C23 !important;
 }
+.rma-summary-content-container .btn-primary:focus, .btn-primary.focus, .btn-primary:hover {
+    color: #fff !important;
+    background-color: #e90f2b !important;
+    border-color: #e90f2b !important;
+}
