@@ -947,3 +947,35 @@ p.very-rma-under-table-p-p {
     background-color: #e90f2b !important;
     border-color: #e90f2b !important;
 }
+
+/** RMA SUMMARY PAGE STYLE */
+.rma-summary-table {
+    background-color: #f0f0f0;
+    border-collapse: inherit;
+    border-spacing: 2px;
+    text-align: left;
+    color: #000;
+}
+.rma-summary-table thead {
+    background-color: #120880;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-summary-table th.rma-summerry {
+    background-color: #120880;
+    padding: 20px 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 5px solid #EC1C23;
+}
+.rma-summary-table thead tr th, .rma-summary-table tbody tr td {
+    padding: 04px;
+}
+.rma-summerry-table td {
+    border: 1px solid #828282;
+}
+.th-background {
+    background-color: #120880;
+    border-bottom: 5px solid #EC1C23 !important;
+}
