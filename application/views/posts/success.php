@@ -14,9 +14,12 @@
             </div>
             <br />
             <span class="email_success_message"><?php echo $emailSuccess; ?></span>
-            <div class="bs-callout bs-callout-danger_bs">
-                <h4>Warning</h4>
-                <p>Please do not press the <strong>BACK</strong> or the <strong>REFRESH</strong> button of your browser</p>
+            <div class="do-not-ref-back">
+                <div class="bs-callout bs-callout-danger_bs">
+                    <h4>Warning!</h4>
+                    <p>Please do not press the <strong>BACK</strong> or the <strong>REFRESH</strong> button of your browser</p>
+                    <a type="button" class="btn btn-default" href="<?php base_url(); ?>">New RMA Request</a>
+                </div>
             </div>
             <table width="100%" class="rma_success_table">
                 <thead>

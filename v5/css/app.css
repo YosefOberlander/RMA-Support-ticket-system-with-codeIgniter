@@ -996,6 +996,7 @@ button[disabled], html input[disabled] {
     margin: 20px 0;
     padding: 15px 30px 15px 15px;
     border-left: 5px solid #eee;
+    position: relative;
 }
 .bs-callout-success {
     background-color: #dff0d8;
@@ -1033,4 +1034,36 @@ button[disabled], html input[disabled] {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
+}
+.a-alert-success .a-icon-alert, .a-icon-success {
+    width: 27px;
+    background-position: -318px -30px;
+}
+.a-icon-alert {
+    height: 37px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+.email_success_message .a-icon-alert {
+    top: 16px;
+}
+.email_success_message .bs-callout h4, .email_success_message .bs-callout p {
+    margin-left: 50px;
+}
+.do-not-ref-back .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.do-not-ref-back .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+.do-not-ref-back .btn-default:hover {
+    color: #333;
+    background-color: #e1e1e1;
+    border-color: #cacaca;
 }

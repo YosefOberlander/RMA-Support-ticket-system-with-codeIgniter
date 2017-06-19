@@ -4,7 +4,7 @@
     <!-- insert later -->
 </div>
 <div class="rma-content rmaDefaultContent">
-    <div class="bs-callout bs-callout-danger">
+    <div class="bs-callout bs-callout-danger_bs">
         <h4>Warning!</h4>
         <p>
             RMA Feature is still in development the following features will not work <strong>Search Criteria</strong>

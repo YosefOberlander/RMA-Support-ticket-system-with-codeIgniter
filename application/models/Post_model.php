@@ -36,8 +36,7 @@
             return $this->db->insert('request_rma_form', $data);
         }
 
-        function sendMail()
-        {
+        function sendCustomerCopyRMARequest() {
             $config = Array(
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.googlemail.com',
@@ -56,7 +55,12 @@
             $status = "Pending";
             $return_type = $this->input->post('customer_return_type');
             $actions = "No Actions Available";
+
+            /** @var $emailAddress  get the users email address from the form
+             * @var $supportEmailAddress send the rma request to rma
+             */
             $emailAddress = $this->input->post('customer_email');
+            $sendEmailsTo = array($emailAddress);
 
             $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
             $message .= '<html xmlns="http://www.w3.org/1999/xhtml">';
@@ -101,15 +105,93 @@
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
             $this->email->from('yosefoberlander99@gmail.com');
-            $this->email->to($emailAddress);
+            $this->email->to($sendEmailsTo);
             $this->email->subject('TechWise Direct RMA/Claim Request Information');
             $this->email->message($message);
             if($this->email->send()) {
-                $emailSuccess = '<div class="bs-callout bs-callout-success"><h4>Success!</h4><p>Thank You for your request, please check your e-mail!</p></div>';
+                $emailSuccess =
+                '<div class="bs-callout bs-callout-success">
+                    <div class="a-alert-success">
+                        <i class="a-icon a-icon-alert"></i>
+                        <h4>Success!</h4>
+                        <p>Thank You for your request, An email confirmation has been sent to you.</p>
+                    </div>
+                </div>';
             } else {
                 $emailSuccess = '<div class="bs-callout bs-callout-danger"><h4>Oh Snap!</h4><p>Sorry, there was a problem sending your email</p></div>';
                 //show_error($this->email->print_debugger());
             }
             return $emailSuccess;
+        }
+
+        public function sendAdminCopyRmaRequest() {
+
+            /**
+             * @var $supportEmailAddress = admin email address
+             * @var $message = email template
+             * @var  $config = array of mail server settings
+             */
+
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'yosefoberlander99@gmail.com',
+                'smtp_pass' => 'apples123',
+                'mailtype' => 'html',
+                'charset' => 'iso-8859-1',
+                'wordwrap' => TRUE
+            );
+
+
+            $supportEmailAddress = 'rma@techwisedirect.com';
+
+            $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+            $message .= '<html xmlns="http://www.w3.org/1999/xhtml">';
+            $message .= '<head>';
+                $message .= '<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />';
+                $message .= '<title>Verify RMA/Claim request information Form</title>';
+                $message .= '<style style="text/css">';
+                $message .= 'body {margin: 0 auto; padding: 0; min-width: 1200px !important; width: 1200px}';
+                $message .= '.rma_success_table {background-color: #f0f0f0; border-collapse: inherit; text-align: left; padding: 2px;}';
+                $message .= '.rma_success_table thead {background-color: #012880; color: #fff; border-bottom: #EC1C23;}';
+                $message .= '.rma_success_table thead tr th {font-weight: 600; font-size: 15px; border: 1px solid; border-collapse: separate;}';
+                $message .= '.rma_success_table thead tr th, .rma_success_table tbody tr td {padding: 04px; text-align: center;}';
+                $message .= '</style>';
+            $message .= '</head>';
+            $message .= '<body>';
+                $message .= '<table width="100%" class="rma_success_table">';
+                    $message .= '<thead>';
+                        $message .= '<tr>';
+                            $message .= '<th></th>';
+                            $message .= '<th>Reference Number</th>';
+                            $message .= '<th>Request Date</th>';
+                            $message .= '<th>Request Product Name</th>';
+                            $message .= '<th>Status</th>';
+                            $message .= '<th>Reason</th>';
+                            $message .= '<th>Actions</th>';
+                        $message .= '</tr>';
+                    $message .= '</thead>';
+                    $message .= '<tbody>';
+                        $message .= '<tr>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."".'</td>';
+                        $message .= '</tr>';
+                    $message .= '</tbody>';
+                $message .= '</table>';
+            $message .= '</body>';
+            $message .= '</html>';
+            $this->load->library('email', $config);
+            $this->email->set_newline("\r\n");
+            $this->email->from('yosefoberlander99@gmail.com');
+            $this->email->to($supportEmailAddress);
+            $this->email->subject('TechWise Direct RMA/Claim Request Information');
+            $this->email->message($message);
+            $this->email->send();
         }
     }
