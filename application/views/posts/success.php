@@ -13,6 +13,11 @@
                 <h1 class="bblue-title">Verify RMA/Claim Request Information</h1>
             </div>
             <br />
+            <span class="email_success_message"><?php echo $emailSuccess; ?></span>
+            <div class="bs-callout bs-callout-danger_bs">
+                <h4>Warning</h4>
+                <p>Please do not press the <strong>BACK</strong> or the <strong>REFRESH</strong> button of your browser</p>
+            </div>
             <table width="100%" class="rma_success_table">
                 <thead>
                     <tr>
@@ -315,5 +320,13 @@
 </div>
 
 <script>
-    $("body").addClass("rma-body");
+    $(document).ready(function () {
+        $("body").addClass("rma-body");
+        $(".email_success_message").delay(500).show(50, function () {
+           $(this).delay(15000).hide(50, function () {
+              $(this).remove();
+           });
+        });
+    });
 </script>
+

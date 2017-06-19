@@ -997,11 +997,33 @@ button[disabled], html input[disabled] {
     padding: 15px 30px 15px 15px;
     border-left: 5px solid #eee;
 }
+.bs-callout-success {
+    background-color: #dff0d8;
+    border-color: #5cb85c;
+    color: #3c763d;
+}
+.bs-callout-success {
+    color: #5cb85c;
+}
 .bs-callout-warning h4 {
     color: #C09853;
 }
+.bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dfb5b4;
+}
+.bs-callout-danger_bs {
+    background-color: #f2dede;
+    border-color: #d9534f;
+}
+.bs-callout-danger_bs h4 {
+    color: #d9534f;
+}
 .bs-callout h4 {
     margin-top: 0;
+}
+.bs-callout-danger h4 {
+    color: #b94a48;
 }
 .bs-callout p:last-child {
     margin-bottom: 0;
@@ -1011,11 +1033,4 @@ button[disabled], html input[disabled] {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-}
-.bs-callout-danger {
-    background-color: #fcf2f2;
-    border-color: #dfb5b4;
-}
-.bs-callout-danger h4 {
-    color: #b94a48;
 }

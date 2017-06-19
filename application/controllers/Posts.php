@@ -30,6 +30,9 @@ class Posts extends CI_Controller {
        $this->form_validation->set_rules('customer_quantity', 'Quantity', 'required');
        $this->form_validation->set_rules('customer_comments', 'Comments', 'required');
 
+       $emailAddress = $this->input->post('customer_email');
+       $productName = $this->input->post('customer_product_name');
+
        if($this->form_validation->run() === FALSE ) {
            $this->load->view('templates/header');
            $this->load->view('posts/create', $data);
@@ -42,6 +45,9 @@ class Posts extends CI_Controller {
 
     public function success() {
         $data['title'] = "Verify RMA/Claim request information Form";
+
+        $this->load->model('post_model');
+        $data['emailSuccess'] = $this->post_model->sendMail();
 
         $this->load->view('templates/header');
         $this->load->view('posts/success', $data);
