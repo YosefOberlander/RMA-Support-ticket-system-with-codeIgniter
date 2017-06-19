@@ -27,18 +27,50 @@
             $data['results'] = $this->search_model->get_results($rmaReferenceNumber);
 
             // pass the result into the view
-            if (empty($data)) {
+            $this->load->view('templates/header');
+            $this->load->view('posts/current_rma_summary', $data);
+            $this->load->view('templates/footer');
+        }
 
-                $this->load->view('templates/header');
-                $this->load->view('posts/no_record_found');
-                $this->load->view('templates/footer');
+        public function execute_rma_number_search() {
 
-            } else {
+            // get the posted term
+            $rmaNumber = $this->input->post('rma_number_search');
 
-                $this->load->view('templates/header');
-                $this->load->view('posts/current_rma_summary', $data);
-                $this->load->view('templates/footer');
+            // use the model
+            $data['results'] = $this->search_model->get_rma_number_results($rmaNumber);
 
-            }
+            // pass the result into the view
+            $this->load->view('templates/header');
+            $this->load->view('posts/current_rma_summary', $data);
+            $this->load->view('templates/footer');
+        }
+
+        public function execute_claim_search() {
+
+            // get the posted term
+            $claimNumber = $this->input->post('claim_number');
+
+            // use the model
+            $data['results'] = $this->search_model->get_claim_results($claimNumber);
+
+            // pass the result into the view
+            $this->load->view('templates/header');
+            $this->load->view('posts/current_rma_summary', $data);
+            $this->load->view('templates/footer');
+        }
+
+        public function execute_refund_search() {
+
+            // get the posted term
+            $refundNumber = $this->input->post('rma_refund_number');
+
+            // use the model
+            $data['results'] = $this->search_model->get_refund_results($refundNumber);
+
+            // pass the result into the view
+            $this->load->view('templates/header');
+            $this->load->view('posts/current_rma_summary', $data);
+            $this->load->view('templates/footer');
         }
     }

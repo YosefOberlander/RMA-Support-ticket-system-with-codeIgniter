@@ -979,3 +979,43 @@ p.very-rma-under-table-p-p {
     background-color: #120880;
     border-bottom: 5px solid #EC1C23 !important;
 }
+button[disabled], html input[disabled] {
+    cursor: not-allowed;
+}
+.rma-search-content .btn-primary:focus, .btn-primary.focus, .btn-primary:hover {
+    color: #fff !important;
+    background-color: #e90f2b !important;
+    border-color: #e90f2b !important;
+}
+/* BS CALLOUTS STYLE */
+.bs-callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+}
+.bs-callout {
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+}
+.bs-callout-warning h4 {
+    color: #C09853;
+}
+.bs-callout h4 {
+    margin-top: 0;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout p {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+.bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dfb5b4;
+}
+.bs-callout-danger h4 {
+    color: #b94a48;
+}

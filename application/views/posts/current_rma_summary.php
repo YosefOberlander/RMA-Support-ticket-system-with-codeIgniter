@@ -15,18 +15,19 @@
                     <table width="100%" class="rma-status-details" border="1">
                         <thead>
                             <tr class="rma-status-one">
-                                <th class="status-one" colspan="2">Requested User</th>
+                                <th class="status-one" colspan="3">Requested User</th>
                                 <th class="status-two">Reference Number</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="2"><?php echo $val['name']; ?></td>
+                                <td colspan="3"><?php echo $val['name']; ?></td>
                                 <td><?php echo $val['reference_number']; ?></td>
                             </tr>
                             <tr>
                                 <td style="color: #000">RMA Creation Date</td>
                                 <td style="color: #000">RMA #</td>
+                                <td style="color: #000;">Refund #</td>
                                 <td style="color: #000">RMA Status</td>
                             </tr>
                             <tr>
@@ -40,6 +41,14 @@
                                     ?>
                                 </td>
                                 <td>
+                                    <?php if (empty($val['refund_number'])) {
+                                        echo "-";
+                                    } else {
+                                        echo $val['refund_number'];
+                                    }
+                                    ?>
+                                </td>
+                                <td>
                                     <?php if ($val['status'] == 0) {
                                       echo "Pending";
                                     } else if ($val['status'] == 1) {
@@ -47,8 +56,10 @@
                                     } else if ($val['status'] == 2) {
                                         echo "No Approved";
                                     } else if ($val['status'] == 3) {
-                                        echo "Refund Completed";
+                                        echo "Processing Refund";
                                     } else if ($val['status'] == 4) {
+                                        echo "Refund Completed";
+                                    } else if ($val['status'] == 5) {
                                         echo "Completed/Closed";
                                     }
                                     ?>
@@ -95,6 +106,8 @@
                                         echo "No Actions Available";
                                     } else if ($val['status'] == 4) {
                                         echo "No Actions Available";
+                                    } else if ($val['status'] == 5) {
+                                        echo "No Actions Available";
                                     }
                                     ?>
                                 </td>
@@ -105,7 +118,7 @@
                     <div class="push-20-t">
                         <p class="very-rma-under-table-p">If your RMA is Pending no actions will be available</p>
                         <a style="color: #1A1BCF; text-decoration: underline; font-weight: bold; display: block;" href="<?php echo base_url();?>check_status">Return to RMA Search</a>
-                        <a style="color: #1A1BCF; text-decoration: underline; font-weight: bold;" href="#">Return to Summary Result</a>
+                        <!-- <a style="color: #1A1BCF; text-decoration: underline; font-weight: bold;" href="#">Return to Summary Result</a> -->
                     </div>
                 </div>
             </article>

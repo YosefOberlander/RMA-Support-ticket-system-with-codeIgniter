@@ -4,6 +4,12 @@
     <!-- insert later -->
 </div>
 <div class="rma-content rmaDefaultContent">
+    <div class="bs-callout bs-callout-danger">
+        <h4>Warning!</h4>
+        <p>
+            RMA Feature is still in development the following features will not work <strong>Search Criteria</strong>
+        </p>
+    </div>
     <div class="rma-search-content">
         <div class="rma-search-content">
             <article id="rma-search-post">
@@ -31,24 +37,28 @@
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 15%;" for="rma_number_search">RMA Number:</label>
+                                            <input type="radio" name="selectSearch" id="search_via_rma_number" />
                                             <input class="input-w-25 input-text" name="rma_number_search" id="rma_number_search" /> (e.g. RMA-1234 or RMA-123%)
                                         </p>
                                     </td>
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label class="right-align" for="rma_reference_number">RMA Reference Number:</label>
+                                            <input type="radio" name="selectSearch" id="search_via_reference_number" />
                                             <input class="input-w-25 input-text" name="rma_reference_number" id="rma_reference_number" /> (e.g. 66263442)
                                         </p>
                                     </td>
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 14.3%;" for="claim_number">Claim Number:</label>
+                                            <input type="radio" name="selectSearch" id="search_via_claim_number">
                                             <input class="input-w-25 input-text" name="claim_number" id="claim_number" /> (e.g. 26450442)
                                         </p>
                                     </td>
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 9.4%;" for="rma_refund_number">RMA Refund Number:</label>
+                                            <input type="radio" name="selectSearch" id="search_via_refund_number" />
                                             <input class="input-w-25 input-text" name="rma_refund_number" id="rma_refund_number" /> (e.g. 15660331)
                                         </p>
                                     </td>
@@ -68,20 +78,20 @@
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 13.6%;" for="rma_containing_sku">Containing SKU:</label>
-                                            <input class="input-w-25 input-text" name="rma_containing_sku" id="rma_containing_sku" />
+                                            <input disabled class="input-w-25 input-text" name="rma_containing_sku" id="rma_containing_sku" />
                                         </p>
                                     </td>
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 17%" for="rma_exact_date">Exact Date:</label>
-                                            <input class="input-w-25 input-text" name="rma_exact_date" id="rma_exact_date" /> (use format MM/DD/YYYY)
+                                            <input disabled class="input-w-25 input-text" name="rma_exact_date" id="rma_exact_date" /> (use format MM/DD/YYYY)
                                         </p>
                                     </td>
                                     <td>
                                         <p class="form-row form-row-wide">
                                             <label style="margin-right: 16.4%" for="rma_date_range">Date Range:</label>
-                                            <input class="input-text" name="rma_date_range_from" id="rma_date_range_from" style="width: 16.1%;"/> To
-                                            <input class="input-text" name="rma_date_range_to" id="rma_date_range_to" style="width: 16.2%;" />
+                                            <input disabled class="input-text" name="rma_date_range_from" id="rma_date_range_from" style="width: 16.1%;"/> To
+                                            <input disabled class="input-text" name="rma_date_range_to" id="rma_date_range_to" style="width: 16.2%;" />
                                         </p>
                                     </td>
                                     <td>
@@ -115,6 +125,34 @@
             datepic("#rma_exact_date").datepicker({datepicker:"m/d/yy"});
             datepic("#rma_date_range_from").datepicker({datepicker:"m/d/yy"});
             datepic("#rma_date_range_to").datepicker({datepicker:"m/d/yy"});
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var search = jQuery.noConflict();
+        search('#search_via_rma_number').on('change', function(){
+            if (search(this).is(':checked')) {
+                search('form').attr('action', '<?php echo base_url();?>search/execute_rma_number_search');
+            }
+        });
+
+        search('#search_via_reference_number').on('change', function(){
+            if (search(this).is(':checked')) {
+                search('form').attr('action', '<?php echo base_url();?>search/execute_rma_search');
+            }
+        });
+
+        search('#search_via_claim_number').on('change', function(){
+            if (search(this).is(':checked')) {
+                search('form').attr('action', '<?php echo base_url();?>search/execute_claim_search');
+            }
+        });
+
+        search('#search_via_refund_number').on('change', function(){
+            if (search(this).is(':checked')) {
+                search('form').attr('action', '<?php echo base_url();?>search/execute_refund_search');
+            }
         });
     });
 </script>

@@ -15,4 +15,47 @@
             // Return the results.
             return $query->result_array();
         }
+
+        public function get_rma_number_results($rmaNumber='default') {
+
+            // Use the Active Records class for safer queries.
+            $this->db->select('*');
+            $this->db->from('request_rma_form');
+            $this->db->where('rma_number',$rmaNumber);
+
+            // Execute the search query.
+            $query = $this->db->get();
+
+            // Return the results.
+            return $query->result_array();
+        }
+
+        public function execute_claim_search($claimNumber='default') {
+
+            // Use the Active Records class for safer queries.
+            $this->db->select('*');
+            $this->db->from('request_rma_form');
+            $this->db->where('rma_number',$claimNumber);
+
+            // Execute the search query.
+            $query = $this->db->get();
+
+            // Return the results.
+            return $query->result_array();
+        }
+
+        public function get_refund_results($refundNumber='default') {
+
+            // Use the Active Records class for safer queries.
+            $this->db->select('*');
+            $this->db->from('request_rma_form');
+            $this->db->where('refund_number',$refundNumber);
+
+            // Execute the search query.
+            $query = $this->db->get();
+
+            // Return the results.
+            return $query->result_array();
+        }
     }
+
