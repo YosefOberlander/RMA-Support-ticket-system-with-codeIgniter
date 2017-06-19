@@ -49,8 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['check_status'] = 'content/check_rma_status';
-$route['rma_summary_result'] = 'content/rma_summary_result';
+$route['check_status'] = 'search/index';
+$route['rma_summary_result'] = 'execute_rma_search/rma_summary_result';
 $route['current_rma_summary'] = 'content/found_rma_record';
 $route['posts/create'] = 'posts/create';
 $route['posts/(:any)'] = 'posts/view/$1';

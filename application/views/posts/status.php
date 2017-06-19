@@ -19,7 +19,7 @@
                         <div class="rma-search-form-error-container">
 
                         </div>
-                        <?= form_open('search/rma_search'); ?>
+                        <?= form_open('search/execute_rma_search'); ?>
                         <table width="100%" class="rma-search-table claimtable">
                             <thead>
                                 <tr>
