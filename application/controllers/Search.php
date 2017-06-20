@@ -73,4 +73,18 @@
             $this->load->view('posts/current_rma_summary', $data);
             $this->load->view('templates/footer');
         }
+
+        public function find_rma_authorization() {
+
+            // get the posted term
+            $rmaNumber = $this->input->post('con_rma_number');
+
+            // use the model
+            $data['results'] = $this->search_model->get_rma_authorization_data($rmaNumber);
+
+            $this->load->view('templates/header');
+            $this->load->view('posts/rma_request_window', $data);
+            $this->load->view('templates/footer');
+
+        }
     }

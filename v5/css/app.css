@@ -1184,3 +1184,9 @@ button[disabled], html input[disabled] {
 #pageContentContainer table.a-bordered td, #pageContentContainer table.a-bordered th {
     border-bottom: 1px solid #eaeaea;
 }
+
+@media print {
+    .hidden-print {
+        display: none !important;
+    }
+}

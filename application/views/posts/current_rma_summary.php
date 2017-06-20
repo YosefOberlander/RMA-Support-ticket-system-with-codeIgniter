@@ -89,7 +89,7 @@
                                     <?php if ($val['status'] == 0) {
                                     echo "No Actions Available";
                                     } else if ($val['status'] == 1) {
-                                    echo  '<button class="btn btn-primary Techblue" type="button" data-toggle="modal" data-target="#confirm_rma_number">Label and Instruction</button>';
+                                    echo  '<button class="btn btn-primary Techblue" type="button" data-toggle="modal" data-target="#confirm_rma_number">Print Label and Instruction</button>';
                                     } else if ($val['status'] == 2) {
                                         echo "No Actions Available";
                                     } else if ($val['status'] == 3) {
@@ -144,7 +144,7 @@
                                     <td>
                                         <p class="form-row form-row-wide model-form-row" style="margin: 20px; line-height: 1;">
                                             <label style="margin-right: 4%;" class="rma-model-label" for="con_rma_number">RMA Number:</label>
-                                            <input class="rma-model-input-text" name="con_rma_number" id="con_rma_number" style="width: 45%; margin-right: 10px;"/> <span style="color: #000;">(e.g. EMA-1234)</span>
+                                            <input class="rma-model-input-text" name="con_rma_number" id="con_rma_number" style="width: 45%; margin-right: 10px;"/> <span style="color: #000;">(e.g. RMA-1234)</span>
                                         </p>
                                     </td>
                                 </tr>
