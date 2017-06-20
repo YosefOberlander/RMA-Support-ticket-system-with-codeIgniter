@@ -89,17 +89,17 @@
                                     <?php if ($val['status'] == 0) {
                                       echo "No Actions Available";
                                     } else if ($val['status'] == 1) {
-                                        echo '<div class="dropdown">
-                                        <button class="btn btn-primary dropdown-toggle Techblue" type="button" data-toggle="dropdown">Download Label and Instructions
-                                            <span class="caret"></span></button>
-                                        <ul class="dropdown-menu" style="left: 25px;">
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#"><i class="glyphicon glyphicon-save" style="margin-right: 5px;"></i> Download Shipping Label</a></li>
-                                            <li><a href="#"><i class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></i> Email Shipping Label</a></li>
-                                            <li><a href="#"><i class="glyphicon glyphicon-file" style="margin-right: 5px;"></i> Download RMA Authorization</a></li>
-                                            <li><a href="#"><i class="glyphicon glyphicon-info-sign" style="margin-right: 5px;"></i> Download Instructions</a></li>
+                                        echo "<div class='dropdown'>
+                                        <button class='btn btn-primary dropdown-toggle Techblue' type='button' data-toggle='dropdown'>Download Label and Instructions
+                                            <span class='caret'></span></button>
+                                        <ul class='dropdown-menu' style='left: 25px;'>
+                                            <li><a href='#'></a></li>
+                                            <li><a href='#'><i class='glyphicon glyphicon-save' style='margin-right: 5px;'></i> Download Shipping Label</a></li>
+                                            <li><a href='#'><i class='glyphicon glyphicon-envelope' style='margin-right: 5px;'></i> Email Shipping Label</a></li>
+                                            <li><a href='http://localhost/techwise/posts/rma_request_pdf' target='_blank'><i class='glyphicon glyphicon-file' style='margin-right: 5px;'></i> Download RMA Authorization</a></li>
+                                            <li><a href='#'><i class='glyphicon glyphicon-info-sign' style='margin-right: 5px;'></i> Download Instructions</a></li>
                                         </ul>
-                                    </div>';
+                                    </div>";
                                     } else if ($val['status'] == 2) {
                                         echo "No Actions Available";
                                     } else if ($val['status'] == 3) {

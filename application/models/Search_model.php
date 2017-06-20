@@ -34,8 +34,8 @@
 
             // Use the Active Records class for safer queries.
             $this->db->select('*');
-            $this->db->from('request_rma_form');
-            $this->db->where('rma_number',$claimNumber);
+            $this->db->from('request_claim_form');
+            $this->db->where('claim_number',$claimNumber);
 
             // Execute the search query.
             $query = $this->db->get();

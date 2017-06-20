@@ -1067,3 +1067,106 @@ button[disabled], html input[disabled] {
     background-color: #e1e1e1;
     border-color: #cacaca;
 }
+/** RMA Authorization Form pdf **/
+ #pageContentContainer {
+     position: relative;
+     zoom: 1;
+     margin: 0 auto;
+     max-width: 1100px;
+     font-family: Arial, sans-serif;
+     color: #111;
+     line-height: 19px;
+     font-size: 13px;
+ }
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+#pageContentContainer .a-section {
+    margin-bottom: 22px;
+}
+#pageContentContainer h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+}
+#pageContentContainer h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+}
+#pageContentContainer hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+#pageContentContainer .horizontal-cut-line {
+    width: 95%;
+    border-top: 1px dashed;
+    border-color: gray;
+}
+#pageContentContainer .a-text-center {
+    text-align: center;
+}
+#pageContentContainer .a-section_no_Mb {
+    margin-bottom: 0;
+}
+#pageContentContainer table.a-bordered {
+    margin-bottom: 22px;
+    border: 1px solid #e7e7e7;
+    border-top-color: #eaeaea;
+    border-bottom: none;
+    border-spacing: 0;
+}
+#pageContentContainer table:last-child {
+    margin-bottom: 0 !important;
+}
+#pageContentContainer .orc-auto-width-and-side-margin {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+#pageContentContainer .a-size-base {
+    font-size: 13px !important;
+    line-height: 19px;
+}
+#pageContentContainer table {
+    margin-bottom: 18px;
+    border-collapse: collapse;
+    width: 100%;
+}
+#pageContentContainer table.a-bordered tr:first-child th {
+    background: #f0f0f0;
+    background: #f3f3f3;
+    background: -webkit-linear-gradient(top,#f8f8f8,#eee);
+    background: linear-gradient(to bottom,#f8f8f8,#eee);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    border-color: #e7e7e7;
+    border-bottom: 1px solid #ddd;
+}
+#pageContentContainer table.a-bordered td, table.a-bordered th {
+    padding: 7px 14px 6px;
+}
+#pageContentContainer th {
+    text-align: left;
+}
+#pageContentContainer td, th {
+    vertical-align: top;
+}
+#pageContentContainer .fixed-width {
+    width: 80px;
+}
+#pageContentContainer table.a-bordered tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+#pageContentContainer table.a-bordered tr:last-child td {
+    border-color: #e7e7e7;
+}
+#pageContentContainer table.a-bordered td, #pageContentContainer table.a-bordered th {
+    border-bottom: 1px solid #eaeaea;
+}

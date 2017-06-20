@@ -146,13 +146,25 @@
 
             $supportEmailAddress = 'rma@techwisedirect.com';
 
+            $rmaReferenceNumber = $this->input->post('customer_reference_number');
+            $rmaRequestDate = $this->input->post('rma_request_date');
+            $rmaRequestName = $this->input->post('customer_name');
+            $rmaRequestEmail = $this->input->post('customer_email');
+            $rmaRequestMarketplace = $this->input->post('customer_marketplace');
+            $rmaRequestOrderNumber = $this->input->post('customer_order_number');
+            $rmaRequestReturnType = $this->input->post('customer_return_type');
+            $rmaRequestSku = $this->input->post('customer_sku');
+            $rmaRequestProductName = $this->input->post('customer_product_name');
+            $rmaRequestQty = $this->input->post('customer_quantity');
+            $rmaRequestComment = $this->input->post('customer_comments');
+            
             $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
             $message .= '<html xmlns="http://www.w3.org/1999/xhtml">';
             $message .= '<head>';
                 $message .= '<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />';
                 $message .= '<title>Verify RMA/Claim request information Form</title>';
                 $message .= '<style style="text/css">';
-                $message .= 'body {margin: 0 auto; padding: 0; min-width: 1200px !important; width: 1200px}';
+                $message .= 'body {margin: 0 auto; padding: 0; min-width: 1200px !important;}';
                 $message .= '.rma_success_table {background-color: #f0f0f0; border-collapse: inherit; text-align: left; padding: 2px;}';
                 $message .= '.rma_success_table thead {background-color: #012880; color: #fff; border-bottom: #EC1C23;}';
                 $message .= '.rma_success_table thead tr th {font-weight: 600; font-size: 15px; border: 1px solid; border-collapse: separate;}';
@@ -163,24 +175,32 @@
                 $message .= '<table width="100%" class="rma_success_table">';
                     $message .= '<thead>';
                         $message .= '<tr>';
-                            $message .= '<th></th>';
                             $message .= '<th>Reference Number</th>';
                             $message .= '<th>Request Date</th>';
-                            $message .= '<th>Request Product Name</th>';
-                            $message .= '<th>Status</th>';
-                            $message .= '<th>Reason</th>';
-                            $message .= '<th>Actions</th>';
+                            $message .= '<th>Customer Name</th>';
+                            $message .= '<th>Customer Email</th>';
+                            $message .= '<th>Marketplace Name</th>';
+                            $message .= '<th>Order Number</th>';
+                            $message .= '<th>Return Type</th>';
+                            $message .= '<th>SKU</th>';
+                            $message .= '<th>Product Name</th>';
+                            $message .= '<th>Quantity</th>';
+                            $message .= '<th>Customer Comments</th>';
                         $message .= '</tr>';
                     $message .= '</thead>';
                     $message .= '<tbody>';
                         $message .= '<tr>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
-                            $message .= '<td>'."".'</td>';
+                            $message .= '<td>'."$rmaReferenceNumber".'</td>';
+                            $message .= '<td>'."$rmaRequestDate".'</td>';
+                            $message .= '<td>'."$rmaRequestName".'</td>';
+                            $message .= '<td>'."$rmaRequestEmail".'</td>';
+                            $message .= '<td>'."$rmaRequestMarketplace".'</td>';
+                            $message .= '<td>'."$rmaRequestOrderNumber".'</td>';
+                            $message .= '<td>'."$rmaRequestReturnType".'</td>';
+                            $message .= '<td>'."$rmaRequestSku".'</td>';
+                            $message .= '<td>'."$rmaRequestProductName".'</td>';
+                            $message .= '<td>'."$rmaRequestQty".'</td>';
+                            $message .= '<td>'."$rmaRequestComment".'</td>';
                         $message .= '</tr>';
                     $message .= '</tbody>';
                 $message .= '</table>';
@@ -193,5 +213,9 @@
             $this->email->subject('TechWise Direct RMA/Claim Request Information');
             $this->email->message($message);
             $this->email->send();
+        }
+
+        public function rma_authorization_form_values() {
+
         }
     }
