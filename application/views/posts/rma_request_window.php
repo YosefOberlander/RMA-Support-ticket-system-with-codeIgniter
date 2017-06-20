@@ -20,6 +20,9 @@
         <hr class="a-divider-normal horizontal-cut-line">
         <div class="a-section a-text-center">
             <!-- dynamic-barcode-image -->
+            <div class="">
+                <img src='<?php echo $barcode; ?>'>
+            </div>
             <img src="https://s19.postimg.org/xuo3x9ufn/Dvjrq_DPQRRMA.gif" />
         </div>
         <div class="a-section_no_Mb">
