@@ -21,8 +21,10 @@
                         <th class="fixed-width">Quantity</th>
                     </tr>
                     <tr>
-                        <td></td>
+                        <?php foreach ($query as $val) { ?>
+                        <td><?php echo $val['product_name']; ?></td>
                         <td class="fixed-width">1</td>
+                        <?php } ?>
                     </tr>
                 </tbody>
             </table>

@@ -87,27 +87,17 @@
                                 <td><?php echo $val['quantity']; ?></td>
                                 <td style="padding: 5px;">
                                     <?php if ($val['status'] == 0) {
-                                      echo "No Actions Available";
+                                    echo "No Actions Available";
                                     } else if ($val['status'] == 1) {
-                                        echo "<div class='dropdown'>
-                                        <button class='btn btn-primary dropdown-toggle Techblue' type='button' data-toggle='dropdown'>Download Label and Instructions
-                                            <span class='caret'></span></button>
-                                        <ul class='dropdown-menu' style='left: 25px;'>
-                                            <li><a href='#'></a></li>
-                                            <li><a href='#'><i class='glyphicon glyphicon-save' style='margin-right: 5px;'></i> Download Shipping Label</a></li>
-                                            <li><a href='#'><i class='glyphicon glyphicon-envelope' style='margin-right: 5px;'></i> Email Shipping Label</a></li>
-                                            <li><a href='http://localhost/techwise/posts/rma_request_pdf' target='_blank'><i class='glyphicon glyphicon-file' style='margin-right: 5px;'></i> Download RMA Authorization</a></li>
-                                            <li><a href='#'><i class='glyphicon glyphicon-info-sign' style='margin-right: 5px;'></i> Download Instructions</a></li>
-                                        </ul>
-                                    </div>";
+                                    echo  '<button class="btn btn-primary Techblue" type="button" data-toggle="modal" data-target="#confirm_rma_number">Label and Instruction</button>';
                                     } else if ($val['status'] == 2) {
                                         echo "No Actions Available";
                                     } else if ($val['status'] == 3) {
-                                        echo "No Actions Available";
+                                    echo "No Actions Available";
                                     } else if ($val['status'] == 4) {
-                                        echo "No Actions Available";
+                                    echo "No Actions Available";
                                     } else if ($val['status'] == 5) {
-                                        echo "No Actions Available";
+                                    echo "No Actions Available";
                                     }
                                     ?>
                                 </td>
@@ -124,6 +114,51 @@
             </article>
         </div>
     </div>
+</div>
+
+<!-- open authorization model -->
+<div class="modal fade in" id="confirm_rma_number" tabindex="-1" role="dialog">
+     <div class="modal-dialog modal-dialog-popout">
+         <div class="modal-content">
+             <div class="block block-themed block-transparent remove-margin-b">
+                 <div class="block-header bg-techwise-dark">
+                     <ul class="block-options">
+                         <li>
+                             <button class="no-opacity" data-dismiss="modal" type="button">
+                                 <i class="si icon-close"></i>
+                             </button>
+                         </li>
+                     </ul>
+                    <h3 class="block-title">RMA Return Authorization</h3>
+                 </div>
+                 <div class="block-content">
+                     <?= form_open('search/find_rma_authorization'); ?>
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th style="color: #000;">Please enter your RMA number in order to print out your label and instructions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p class="form-row form-row-wide model-form-row" style="margin: 20px; line-height: 1;">
+                                            <label style="margin-right: 4%;" class="rma-model-label" for="con_rma_number">RMA Number:</label>
+                                            <input class="rma-model-input-text" name="con_rma_number" id="con_rma_number" style="width: 45%; margin-right: 10px;"/> <span style="color: #000;">(e.g. EMA-1234)</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                     </div>
+                 </div>
+                 <div class="modal-footer">
+                     <button class="btn btn-primary Techblue" type="button" data-dismiss="modal">Close</button>
+                     <button class="btn btn-primary Techblue" type="submit">Search...</button>
+                 </div>
+             <?= form_close(); ?>
+         </div>
+     </div>
 </div>
 
 <script>

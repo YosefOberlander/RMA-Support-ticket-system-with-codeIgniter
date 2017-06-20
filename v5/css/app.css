@@ -541,8 +541,22 @@ ol.a-nonestyle li, ul.a-nonestyle li {
 .bg-primary-dark {
     background-color: #3e4a59;
 }
-
-
+.bg-techwise-dark {
+    background-color: #120880;
+}
+.rma-model-label {
+    color: #000;
+    display: inline-block;
+    margin-left: 7%;
+}
+.rma-model-input-text {
+    border: 1px solid #999;
+    font-size: 15px;
+    color: #000;
+    padding: 8px;
+    height: 36px;
+    background-color: #fff;
+}
 
 /* RMA INDEX PAGE STYLE */
 .rma-body {

@@ -52,12 +52,4 @@ class Posts extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function print_rma_authorization() {
-
-
-        $this->load->view('templates/header');
-        $this->load->view('posts/rma_request_pdf', $data);
-        $this->load->view('templates/footer');
-
-    }
 }
