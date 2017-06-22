@@ -35,3 +35,7 @@ CREATE TABLE IF NOT EXISTS `request_rma_form` (
   `status` int(11) NOT NULL DEFAULT '0'
 );
 ```
+## Usage
+It is just a starter for RMA/Support Ticket functionalities.
+
+Extend the user controller or keep it as it is and write your own application with Codeigniter.
