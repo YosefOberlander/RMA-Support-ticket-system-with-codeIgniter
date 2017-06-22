@@ -45,5 +45,5 @@ CREATE TABLE `request_rma_form` (
   `hardware_serial_numbers` text,
   `comments` text NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+);
 ```
