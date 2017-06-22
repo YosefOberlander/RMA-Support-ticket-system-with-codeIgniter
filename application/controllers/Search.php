@@ -82,7 +82,6 @@
 
             // use the model
             $data['results'] = $this->search_model->get_rma_authorization_data($rmaNumber);
-            $data['barcode'] = $this->set_barcode($rmaNumber);
 
             $this->load->view('templates/header');
             $this->load->view('posts/rma_request_window', $data);
@@ -90,13 +89,4 @@
 
         }
 
-        private function set_barcode($code)
-        {
-            //load library
-            $this->load->library('zend');
-            //load in folder Zend
-            $this->zend->load('Zend/Barcode');
-            //generate barcode
-            Zend_Barcode::render('code128', 'image', array('text'=>$code), array());
-        }
     }

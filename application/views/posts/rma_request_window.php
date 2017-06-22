@@ -20,10 +20,7 @@
         <hr class="a-divider-normal horizontal-cut-line">
         <div class="a-section a-text-center">
             <!-- dynamic-barcode-image -->
-            <div class="">
-                <img src='<?php echo $barcode; ?>'>
-            </div>
-            <img src="https://s19.postimg.org/xuo3x9ufn/Dvjrq_DPQRRMA.gif" />
+            <img id="barcode" src=""/>
         </div>
         <div class="a-section_no_Mb">
             <?php foreach ($results as $val) { ?>
@@ -45,4 +42,9 @@
 </div>
 <script>
     $("body").addClass("rma-body");
+</script>
+<script>
+    $(document).ready(function () {
+       $("#barcode").JsBarcode("<?php echo $val['rma_number'];?>",{width:2,height:114});
+    });
 </script>

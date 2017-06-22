@@ -49,6 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+// Admin panel routes
+$route['admin'] = 'admin/dashboard';
+
+
 $route['posts/rma_request_pdf'] = 'posts/print_rma_authorization';
 //$route['generate_rma_request'] = 'posts/generate_rma_request';
 $route['check_status'] = 'search/index';
