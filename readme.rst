@@ -1,21 +1,9 @@
-###################
-What is CodeIgniter
-###################
-
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
-
 ## Installation
 1. Open /application/config/database.php and edit with your database settings
 2. On your database, open a SQL terminal paste this and execute:
 
 ```sql
-CREATE TABLE `request_rma_form` (
+CREATE TABLE IF NOT EXISTS `request_rma_form` (
   `id` int(11) NOT NULL,
   `rma_request_count` int(11) NOT NULL,
   `reference_number` varchar(255) NOT NULL,
