@@ -10,9 +10,10 @@ interface and logical structure to access these libraries. CodeIgniter lets
 you creatively focus on your project by minimizing the amount of code needed
 for a given task.
 
-*******************
-Database
-*******************
+## Installation
+1. Open /application/config/database.php and edit with your database settings
+2. On your database, open a SQL terminal paste this and execute:
+
 ```sql
 CREATE TABLE `request_rma_form` (
   `id` int(11) NOT NULL,
