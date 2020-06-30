@@ -1,5 +1,6 @@
 # Update - June 29, 2020
-I've been seeing people interact with this repo, do you want me to keep updating this?
+I've been seeing people interact with this repo, do you want me to keep updating this? if yes please open an Issue and let me know.
+Thanks
 
 # codeigniter-rma/support ticket
 A user rma/support ticket start for Codeigniter 3
